@@ -30,37 +30,37 @@ function playRound(e) {
     let compSelection = options[Math.floor(Math.random() * 3)];
     let playerSelection = `${e.originalTarget.alt}`;
     if (playerSelection == compSelection) {
-       playerSelected.style.cssText = 'color: gray; font-size: 3rem;';
+       playerSelected.style.cssText = 'color: gray; font-size: 250%;';
        playerSelected.textContent = `${playerSelection}`;
-       compSelected.style.cssText = 'color: gray; font-size: 3rem;';
+       compSelected.style.cssText = 'color: gray; font-size: 250%;';
        compSelected.textContent = `${compSelection}`;
        userScore.textContent = `USER: ${pScore}`;
        compScore.textContent = `COMPUTER: ${cScore}`;
-       messages.style.cssText = 'color: gray; font-size: 1.5rem';
+       messages.style.cssText = 'color: gray; font-size: 150%';
        messages.textContent = "It\'s a tie!";
     }
     else if ((playerSelection == "rock" && compSelection == "scissors") ||
     (playerSelection == "paper" && compSelection == "rock") ||
     (playerSelection == "scissors" && compSelection == "paper")) {
-        playerSelected.style.cssText = 'color: green; font-size: 3rem;';
+        playerSelected.style.cssText = 'color: green; font-size: 250%;';
         playerSelected.textContent = `${playerSelection}`;
-        compSelected.style.cssText = 'color: red; font-size: 3rem;';
+        compSelected.style.cssText = 'color: red; font-size: 250%;';
         compSelected.textContent = `${compSelection}`;
         pScore++;
         userScore.textContent = `USER: ${pScore}`;
         compScore.textContent = `COMPUTER: ${cScore}`;
-        messages.style.cssText = 'color: gray; font-size: 1.5rem';
+        messages.style.cssText = 'color: gray; font-size: 150%';
         messages.textContent = "You win this round!";
     }
     else {
-        playerSelected.style.cssText = 'color: red; font-size: 3rem;';
+        playerSelected.style.cssText = 'color: red; font-size: 250%;';
         playerSelected.textContent = `${playerSelection}`;
-        compSelected.style.cssText = 'color: green; font-size: 3rem;';
+        compSelected.style.cssText = 'color: green; font-size: 250%;';
         compSelected.textContent = `${compSelection}`;
         cScore++;
         userScore.textContent = `USER: ${pScore}`;
         compScore.textContent = `COMPUTER: ${cScore}`;
-        messages.style.cssText = 'color:gray; font-size: 1.5rem';
+        messages.style.cssText = 'color:gray; font-size: 150%';
         messages.textContent = "Computer wins this round!";
     }
     if (pScore == 5 || cScore == 5) {
