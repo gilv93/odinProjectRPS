@@ -11,7 +11,7 @@ let cScore = 0;
 
 
 function showSelection(e) {
-    selectionText.textContent = `${e.originalTarget.alt}`;
+    selectionText.textContent = `${e.target.id}`;
 }
 
 function removeSelection() {
@@ -28,7 +28,7 @@ icons.forEach(icon => {
 
 function playRound(e) {
     let compSelection = options[Math.floor(Math.random() * 3)];
-    let playerSelection = `${e.originalTarget.alt}`;
+    let playerSelection = `${e.target.id}`;
     if (playerSelection == compSelection) {
        playerSelected.style.cssText = 'color: gray; font-size: 250%;';
        playerSelected.textContent = `${playerSelection}`;
